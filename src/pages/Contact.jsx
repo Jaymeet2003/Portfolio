@@ -158,7 +158,7 @@ export default function Contact() {
   return (
     <>
       <motion.section 
-        className="relative min-h-screen py-20 px-6 overflow-hidden bg-transparent"
+        className="relative min-h-screen py-20 px-6 overflow-hidden bg-transparent pt-32 sm:pt-20"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -217,7 +217,9 @@ export default function Contact() {
                     <motion.a
                       key={index}
                       href={info.link}
-                      className="contact-element group flex items-center p-6 bg-gradient-to-r from-[#4B0082]/20 to-[#6A0DAD]/20 rounded-2xl border border-[#B10DC9]/30 hover:border-[#A259F7]/50 transition-all duration-300"
+                      className="contact-element group flex items-center p-6 rounded-2xl border transition-all duration-300
+                        bg-gradient-to-r from-[#181828]/90 to-[#232347]/90 border-[#222]/80
+                        sm:bg-gradient-to-r sm:from-[#4B0082]/20 sm:to-[#6A0DAD]/20 sm:border-[#B10DC9]/30 sm:hover:border-[#A259F7]/50"
                       whileHover={{
                         scale: 1.04,
                         rotateY: 8,
@@ -253,7 +255,9 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-white mb-6 text-center">Send Message</h2>
               <motion.div 
                 variants={itemVariants} 
-                className="space-y-6 p-6 bg-gradient-to-r from-[#4B0082]/20 to-[#6A0DAD]/20 rounded-2xl border border-[#B10DC9]/30 shadow-lg w-full"
+                className="space-y-6 p-6 rounded-2xl border shadow-lg w-full
+                  bg-gradient-to-r from-[#181828]/90 to-[#232347]/90 border-[#222]/80
+                  sm:bg-gradient-to-r sm:from-[#4B0082]/20 sm:to-[#6A0DAD]/20 sm:border-[#B10DC9]/30"
                 whileHover={{
                   scale: 1.04,
                   rotateY: 8,

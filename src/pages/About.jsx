@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <CyberBackgroundEffects effect="cornerWaveAR" className="absolute top-0 left-0 w-[100vw] min-h-[100%] h-[100%] z-[-1]" />
-      <section className="relative min-h-screen py-20 px-6 overflow-hidden">
+      <section className="relative min-h-screen py-20 px-6 overflow-hidden pt-32 sm:pt-20">
         <div className="relative z-10 max-w-6xl mx-auto">
           <motion.div className="text-center mb-16">
             <motion.h1

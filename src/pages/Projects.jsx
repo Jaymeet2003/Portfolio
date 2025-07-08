@@ -145,7 +145,7 @@ export default function Projects() {
     <>
       <CyberBackgroundEffects effect="neural" className="cyber-effect" />
       <motion.section 
-        className="relative min-h-screen py-20 px-6 overflow-hidden"
+        className="relative min-h-screen py-20 px-6 overflow-hidden pt-32 sm:pt-20"
         initial="hidden"
         animate="visible"
         variants={containerVariants}

@@ -44,7 +44,7 @@ export default function Home() {
     };
   }
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 pt-32 sm:pt-20">
       <div className="max-w-3xl w-full flex flex-col items-center text-center z-10">
         <motion.h1
           className="text-4xl sm:text-6xl font-bold mb-6 tracking-tight text-white"

@@ -322,7 +322,7 @@ const TerminalWindow = ({ canvasRef }) => {
     
     function drawTerminal() {
       // Terminal background
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.01)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.35)'; // Even darker background
       ctx.fillRect(terminalX - 10, terminalY - 30, 600, 400);
       
       // Remove Terminal border
