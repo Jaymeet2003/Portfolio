@@ -232,7 +232,7 @@ export default function Home() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full">
           <motion.a
-            href="/Jaymeet_Patel_Resume.pdf"
+            href="Jaymeet_Patel_Resume.pdf"
             download
             className="group relative inline-block px-8 py-4 bg-gradient-to-r from-[#6A0DAD] to-[#4B0082] text-white rounded-lg shadow-lg border border-purple-500/30"
             whileHover={{
@@ -273,7 +273,7 @@ export default function Home() {
             </span>
           </motion.a>
           <motion.a
-            href="/about"
+            href="#/about"
             className="group relative inline-block px-8 py-4 bg-gradient-to-r from-[#6A0DAD] to-[#4B0082] text-white rounded-lg shadow-lg border border-purple-500/30"
             whileHover={{
               scale: 1.02,
