@@ -29,7 +29,7 @@ export default function Home() {
         transformOrigin: '50% 50%',
         duration: 0.3,
         ease: 'power2.out',
-      });
+    });
     };
   }
   function handleReset(ref) {
@@ -40,7 +40,7 @@ export default function Home() {
         scale: 1,
         duration: 0.4,
         ease: 'power2.out',
-      });
+    });
     };
   }
   return (
@@ -233,7 +233,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full">
           <motion.a
             href="Jaymeet_Patel_Resume.pdf"
-            download
+          download
             className="group relative inline-block px-8 py-4 bg-gradient-to-r from-[#6A0DAD] to-[#4B0082] text-white rounded-lg shadow-lg border border-purple-500/30"
             whileHover={{
               scale: 1.02,
@@ -265,10 +265,10 @@ export default function Home() {
                 animate={{ y: [0, -2, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 className="text-lg opacity-80"
-              >
+        >
                 ↓
               </motion.span>
-              Download Resume
+          Download Resume
               <span className="text-xs opacity-60 font-mono">.pdf</span>
             </span>
           </motion.a>

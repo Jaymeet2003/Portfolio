@@ -164,7 +164,27 @@ export default function Contact() {
         variants={containerVariants}
       >
         <div className="relative z-10 max-w-6xl mx-auto">
-          <motion.div className="text-center mb-16" variants={containerVariants}>
+          {/* Mobile: Split CONTACT and subtitle into two cards */}
+          <div className="block sm:hidden">
+            <div className="bg-[#181828] rounded-2xl p-6 mb-4 border border-[#A259F7]/20">
+              <motion.h1 
+                ref={titleRef}
+                className="text-4xl font-black bg-gradient-to-r from-[#A259F7] to-[#6A0DAD] bg-clip-text text-transparent"
+                variants={itemVariants}
+              >
+                CONTACT
+              </motion.h1>
+            </div>
+            <div className="bg-[#181828] rounded-2xl p-6 mb-8 border border-[#A259F7]/20">
+              <motion.p 
+                className="text-base text-gray-200"
+                variants={itemVariants}
+              >
+                Let's discuss cybersecurity opportunities and collaborate on security projects
+              </motion.p>
+            </div>
+          </div>
+          <div className="hidden sm:block">
             <motion.h1 
               ref={titleRef}
               className="text-5xl sm:text-7xl font-black mb-6 bg-gradient-to-r from-[#A259F7] to-[#6A0DAD] bg-clip-text text-transparent"
@@ -178,11 +198,11 @@ export default function Contact() {
             >
               Let's discuss cybersecurity opportunities and collaborate on security projects
             </motion.p>
-          </motion.div>
+          </div>
 
           {/* Availability Status - moved here */}
           <motion.div 
-            className="contact-element p-6 mb-10 bg-gradient-to-r from-green-900/20 to-emerald-900/20 rounded-2xl border border-green-500/30 max-w-2xl mx-auto"
+            className="contact-element p-6 mb-10 bg-[#181828] sm:bg-[#11291C]/40 rounded-2xl border border-green-700 max-w-2xl mx-auto"
             whileHover={{
               scale: 1.04,
               rotateY: 8,
@@ -198,9 +218,9 @@ export default function Contact() {
           >
             <div className="flex items-center mb-4">
               <div className="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-              <h3 className="text-white font-semibold">Available for Opportunities</h3>
+              <h3 className="text-white font-semibold text-xl">Available for Opportunities</h3>
             </div>
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-lg">
               Currently accepting new cybersecurity projects, consulting opportunities, and full-time positions.
             </p>
           </motion.div>
