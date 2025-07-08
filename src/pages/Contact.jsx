@@ -68,6 +68,11 @@ export default function Contact() {
     };
   }, []);
 
+  useEffect(() => {
+    // Force scroll to top after Contact page is mounted
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
