@@ -184,7 +184,7 @@ export default function Contact() {
               </motion.p>
             </div>
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden sm:block text-center">
             <motion.h1 
               ref={titleRef}
               className="text-5xl sm:text-7xl font-black mb-6 bg-gradient-to-r from-[#A259F7] to-[#6A0DAD] bg-clip-text text-transparent"
@@ -193,7 +193,7 @@ export default function Contact() {
               CONTACT
             </motion.h1>
             <motion.p 
-              className="text-xl text-gray-200 max-w-3xl mx-auto"
+              className="text-xl text-gray-200 max-w-3xl mx-auto mb-12"
               variants={itemVariants}
             >
               Let's discuss cybersecurity opportunities and collaborate on security projects
@@ -372,10 +372,10 @@ export default function Contact() {
         <div className="max-w-3xl mx-auto flex flex-col items-center justify-center px-4">
           <div className="flex items-center gap-2 mb-2">
             <span className="inline-block align-middle w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_2px_#00FF00] animate-pulse"></span>
-            <span className="text-base font-semibold text-[#A259F7] tracking-wide select-none" style={{ fontFamily: "'Snell Roundhand', 'Apple Chancery', cursive" }}>Jaymeet Patel</span>
+            <span className="text-base font-semibold text-[#A259F7] tracking-wide select-none" style={{ fontFamily: "'Snell Roundhand', 'Apple Chancery', cursive" }}>Jimmy Patel</span>
           </div>
           <div className="text-xs text-gray-400 font-sans tracking-wider mb-2 text-center">
-            © {new Date().getFullYear()} — Jaymeet Patel. All rights reserved.
+            © {new Date().getFullYear()} — Jimmy Patel. All rights reserved.
           </div>
           <div className="flex gap-6 mb-2">
             <a href="https://linkedin.com/in/jimmypatel" target="_blank" rel="noopener noreferrer" className="text-[#CBA0E3] hover:text-[#FF6F61] transition-colors text-sm font-semibold">LinkedIn</a>

@@ -70,7 +70,7 @@ export default function Home() {
               lineHeight: 1.1,
             }}
           >
-            Jaymeet Patel
+            Jimmy Patel
           </motion.span>
         </motion.h1>
         <motion.p

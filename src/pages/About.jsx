@@ -33,7 +33,7 @@ export default function About() {
               <h2 className="text-3xl font-bold text-white mb-6">Background</h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  I'm Jimmy Patel (Jaymeet Patel), a dedicated cybersecurity professional with over five years of experience protecting digital assets and infrastructure across complex environments.
+                  I'm Jimmy Patel, a dedicated cybersecurity professional with over five years of experience protecting digital assets and infrastructure across complex environments.
                 </p>
                 <p>
                   My expertise covers both offensive security, including penetration testing and vulnerability assessments, and defensive security, such as incident response, threat hunting, and continuous monitoring. I specialize in purple team operations, combining offensive and defensive strategies to deliver comprehensive, real-world security solutions.

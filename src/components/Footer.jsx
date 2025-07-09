@@ -52,7 +52,7 @@ export default function Footer() {
         }}
         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
       >
-        © {new Date().getFullYear()} Jaymeet Patel
+        © {new Date().getFullYear()} Jimmy Patel
       </motion.div>
       <nav className="flex gap-6 flex-wrap items-center justify-center">
         {footerLinks.map((link) => (
