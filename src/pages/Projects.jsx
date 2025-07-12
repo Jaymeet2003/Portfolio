@@ -258,7 +258,7 @@ export default function Projects() {
                   style={{ textDecoration: 'none', display: 'block' }}
                 >
                   <motion.div 
-                    className={`project-card group relative p-8 bg-gradient-to-br ${colorClasses} rounded-3xl border transition-all duration-500 glass`}
+                    className={`project-card group relative p-8 bg-gradient-to-br ${colorClasses} rounded-3xl border transition-all duration-500 glass uniform-project-card`}
                     variants={itemVariants}
                     whileHover={{ 
                       scale: 1.06,

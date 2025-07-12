@@ -586,3 +586,36 @@
     border-radius: 50px;
   }
 }
+
+.glassy-glow-card {
+  background: rgba(24, 24, 40, 0.40);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  min-height: 120px;
+  border: 1px solid #A259F7;
+  box-shadow: 0 0 32px 0 #A259F733, 0 0 8px 0 #6A0DAD44;
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  transition: box-shadow 0.3s, border-color 0.3s, border-radius 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.glassy-glow-card:hover {
+  box-shadow: 0 0 48px 8px #A259F766, 0 0 16px 2px #6A0DAD88;
+  border-color: #CBA0E3;
+  border-radius: 0.75rem;
+}
+
+.uniform-project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 420px; /* Adjust as needed for your tallest card */
+  justify-content: stretch;
+}
+
+/* Make the grid container stretch children to equal height */
+.grid.md\:grid-cols-2.lg\:grid-cols-3 {
+  align-items: stretch;
+}

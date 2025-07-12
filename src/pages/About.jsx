@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import CornerWave3D from '../components/CornerWave3D';
@@ -7,6 +7,7 @@ import ProfileCard from '../components/ProfileCard/ProfileCard';
 
 export default function About() {
   const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState('education');
   
   return (
     <>
@@ -61,6 +62,169 @@ export default function About() {
                 <p>
                   With a strong focus on threat detection, secure system design, and proactive defense, I have contributed to initiatives that improved detection accuracy, reduced incident response times, and enhanced overall security posture. I am passionate about building scalable, secure systems and collaborating with teams that value innovation, resilience, and measurable impact.
                 </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Journey/Timeline for Education and Work Experience */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {/* Education Journey */}
+            <motion.div
+              className="glassy-glow-card rounded-lg border border-purple-500/30 bg-gradient-to-r from-purple-900/20 to-pink-900/20 cursor-pointer"
+              whileHover={{
+                scale: 1.04,
+                rotateY: 8,
+                rotateX: 4,
+                boxShadow: '0 0 24px 6px #CBA0E3, 0 0 48px 12px #B10DC9',
+                transition: { duration: 0.03, ease: 'linear' }
+              }}
+              transition={{ duration: 0.03, ease: 'linear' }}
+            >
+              <h4 className="text-xl font-bold mb-6 text-[#A259F7]">Education Journey</h4>
+              <div className="relative pl-6">
+                {[
+                  {
+                    title: 'Masters of Science in Cybersecurity',
+                    place: 'Depaul University, Chicago, IL',
+                    period: 'Jun 2027',
+                    details: [
+                      { label: 'Concentration', value: 'Networking and Infrastructure' },
+                    ],
+                  },
+                  {
+                    title: 'Bachelor of Science in Computer Science',
+                    place: 'University of Illinois Chicago, Chicago, IL',
+                    period: 'Dec 2024',
+                    details: [
+                      { label: 'Minor', value: 'Mathematics' },
+                      { label: 'Bachelor of Business Administration', value: 'Business Administration' },
+                      { label: 'Awards', value: '3× Dean’s List Recipient', highlight: true },
+                      { label: 'Relevant Coursework', value: [
+                        'Network Security',
+                        'Cryptography',
+                        'Concurrent Programming',
+                        'Data Science',
+                        'Database Systems',
+                        'Algorithms',
+                        'Data Structures',
+                        'Networking',
+                      ] },
+                    ],
+                  },
+                ].map((edu, idx, arr) => (
+                  <motion.div
+                    key={edu.title}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.15, duration: 0.4, ease: 'easeOut' }}
+                    className="mb-8 last:mb-0 flex items-start relative"
+                  >
+                    {/* Animated Dot */}
+                    <motion.span
+                      className="absolute left-0 top-2 w-3 h-3 rounded-full bg-gradient-to-br from-[#A259F7] to-[#6A0DAD]"
+                      initial={{ scale: 0.5, background: '#6A0DAD' }}
+                      whileInView={{ scale: 1, background: 'linear-gradient(to bottom right, #A259F7, #6A0DAD)' }}
+                      transition={{ type: 'spring', stiffness: 400, damping: 18, delay: idx * 0.15 + 0.1 }}
+                    />
+                    {/* Animated Line */}
+                    {idx !== arr.length - 1 && (
+                      <motion.span
+                        className="absolute left-[6px] top-6 w-0.5 bg-gradient-to-b from-[#A259F7]/60 to-[#6A0DAD]/60"
+                        initial={{ height: 0 }}
+                        whileInView={{ height: 'calc(100% - 1.5rem)' }}
+                        transition={{ type: 'spring', stiffness: 120, damping: 18, delay: idx * 0.15 + 0.2 }}
+                        style={{ originY: 0 }}
+                      />
+                    )}
+                    <div className="ml-6">
+                      <div className="font-semibold text-white text-lg">{edu.title}</div>
+                      <div className="text-[#A259F7] text-sm font-medium">{edu.place} <span className="text-gray-400">({edu.period})</span></div>
+                      <ul className="text-gray-300 text-sm mt-2 space-y-1">
+                        {edu.details.map((item, i) =>
+                          Array.isArray(item.value) ? (
+                            <li key={i}>
+                              <span className="font-semibold text-[#A259F7]">{item.label}:</span>
+                              <ul className="list-disc list-inside ml-4 mt-1">
+                                {item.value.map((course, j) => (
+                                  <li key={j}>{course}</li>
+                                ))}
+                              </ul>
+                            </li>
+                          ) : (
+                            <li key={i} className={item.highlight ? 'font-semibold text-yellow-300' : ''}>
+                              <span className="font-semibold text-[#A259F7]">{item.label}:</span> {item.value}
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+            {/* Work Experience Journey */}
+            <motion.div
+              className="glassy-glow-card rounded-lg border border-purple-500/30 bg-gradient-to-r from-purple-900/20 to-pink-900/20 cursor-pointer"
+              whileHover={{
+                scale: 1.04,
+                rotateY: 8,
+                rotateX: 4,
+                boxShadow: '0 0 24px 6px #CBA0E3, 0 0 48px 12px #B10DC9',
+                transition: { duration: 0.03, ease: 'linear' }
+              }}
+              transition={{ duration: 0.03, ease: 'linear' }}
+            >
+              <h4 className="text-xl font-bold mb-6 text-[#A259F7]">Work Experience Journey</h4>
+              <div className="relative pl-6">
+                {[
+                  {
+                    title: 'Web Developer',
+                    place: 'UIC SA-TECH, Chicago, IL/USA',
+                    period: 'August 2021 – December 2024',
+                    details: [
+                      { label: 'Impact', value: 'Enhanced web platforms serving 5,000+ students annually, driving significant improvement in functionality and user engagement.' },
+                      { label: 'Mentorship', value: 'Mentored three junior developers, resulting in a 40% reduction in onboarding time.' },
+                      { label: 'Reliability', value: 'Resolved technical issues in under 24 hours on average, maintaining an uptime of 99.8%.' },
+                    ],
+                  },
+                ].map((work, idx, arr) => (
+                  <motion.div
+                    key={work.title}
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.15, duration: 0.4, ease: 'easeOut' }}
+                    className="mb-8 last:mb-0 flex items-start relative"
+                  >
+                    {/* Animated Dot */}
+                    <motion.span
+                      className="absolute left-0 top-2 w-3 h-3 rounded-full bg-gradient-to-br from-[#A259F7] to-[#6A0DAD]"
+                      initial={{ scale: 0.5, background: '#6A0DAD' }}
+                      whileInView={{ scale: 1, background: 'linear-gradient(to bottom right, #A259F7, #6A0DAD)' }}
+                      transition={{ type: 'spring', stiffness: 400, damping: 18, delay: idx * 0.15 + 0.1 }}
+                    />
+                    {/* Animated Line */}
+                    {idx !== arr.length - 1 && (
+                      <motion.span
+                        className="absolute left-[6px] top-6 w-0.5 bg-gradient-to-b from-[#A259F7]/60 to-[#6A0DAD]/60"
+                        initial={{ height: 0 }}
+                        whileInView={{ height: 'calc(100% - 1.5rem)' }}
+                        transition={{ type: 'spring', stiffness: 120, damping: 18, delay: idx * 0.15 + 0.2 }}
+                        style={{ originY: 0 }}
+                      />
+                    )}
+                    <div className="ml-6">
+                      <div className="font-semibold text-white text-lg">{work.title}</div>
+                      <div className="text-[#A259F7] text-sm font-medium">{work.place} <span className="text-gray-400">({work.period})</span></div>
+                      <ul className="text-gray-300 text-sm mt-2 space-y-1">
+                        {work.details.map((item, i) => (
+                          <li key={i}>
+                            <span className="font-semibold text-[#A259F7]">{item.label}:</span> {item.value}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
