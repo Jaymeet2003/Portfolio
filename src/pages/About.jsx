@@ -94,11 +94,9 @@ export default function About() {
                   {
                     title: 'Bachelor of Science in Computer Science',
                     place: 'University of Illinois Chicago, Chicago, IL',
-                    period: 'Dec 2024',
+                    period: 'May 2025',
                     details: [
                       { label: 'Minor', value: 'Mathematics' },
-                      { label: 'Bachelor of Business Administration', value: 'Business Administration' },
-                      { label: 'Awards', value: '3× Dean’s List Recipient', highlight: true },
                       { label: 'Relevant Coursework', value: [
                         'Network Security',
                         'Cryptography',
@@ -109,6 +107,14 @@ export default function About() {
                         'Data Structures',
                         'Networking',
                       ] },
+                    ],
+                  },
+                  {
+                    title: 'Bachelor of Business Administration in Business Administration',
+                    place: 'University of Illinois Chicago, Chicago, IL',
+                    period: 'Dec 2024',
+                    details: [
+                      { label: 'Awards', value: '3× Dean’s List Recipient', highlight: true },
                     ],
                   },
                 ].map((edu, idx, arr) => (
