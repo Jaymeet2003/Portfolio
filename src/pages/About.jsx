@@ -97,6 +97,7 @@ export default function About() {
                     period: 'May 2025',
                     details: [
                       { label: 'Minor', value: 'Mathematics' },
+                      { label: 'Awards', value: '3× Dean\'s List Recipient', highlight: true },
                       { label: 'Relevant Coursework', value: [
                         'Network Security',
                         'Cryptography',
